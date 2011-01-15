@@ -12,8 +12,7 @@ class Post < Mustache
     self.template = File.open("templates/_#{type}.html.mustache").read
 
     File.open("public/#{url}", "w") do |index|
-      layout = Layout.new { render }
-      layout[:title] = [title, "DavidMade"].compact * " - "
+      layout = Layout.new([title, "DavidMade"].compact * " - ") { render }
       index.write(layout.render)
     end
   end
