@@ -38,7 +38,7 @@ class Post < Mustache
   end
 
   def body
-    RDiscount.new(@body).to_html if @body
+    RDiscount.new(@body, :smart).to_html if @body
   end
 
   def type
