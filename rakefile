@@ -49,8 +49,12 @@ class Post < Mustache
     @file_path.gsub(/md$/, "html")
   end
 
+  def last_modified
+    File::mtime(@file_path)
+  end
+
   def <=>(other)
-    self.date <=> other.date
+    [self.date, self.last_modified] <=> [other.date, other.last_modified]
   end
 end
 
