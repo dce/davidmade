@@ -22,7 +22,7 @@ class Post < Mustache
   end
 
   def date
-    Date.parse(@meta["date"])
+    @meta["date"]
   end
 
   def formatted_date
@@ -84,4 +84,13 @@ task :build do |t|
   end
 
   puts layout.render
+end
+
+task :new_post, [:file_name] do |t, args|
+  File.open("posts/#{args.file_name}.md", "w") do |file|
+    file.write "title:\n"
+    file.write "date: #{Date.today}"
+  end
+
+  exec "mate posts/#{args.file_name}.md"
 end
