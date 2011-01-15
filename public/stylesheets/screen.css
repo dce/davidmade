@@ -2,6 +2,7 @@ body {
   font-family: georgia, sans-serif;
   width: 600px;
   margin: 10px 20px;
+  line-height: 1.5;
 }
 
 a {
