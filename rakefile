@@ -1,0 +1,27 @@
+require 'mustache'
+require 'yaml'
+require 'rdiscount'
+
+class Post
+  def initialize(file_path)
+    @path = file_path
+    @meta, @body = File.open(@path).read.split(/\n\n/, 2)
+    @meta = YAML.load(@meta)
+  end
+
+  def title
+    @meta["title"]
+  end
+
+  def body
+    RDiscount.new(@body).to_html
+  end
+end
+
+task :build do |t|
+  posts = Dir.glob("posts/*").map {|f| Post.new(f) }
+
+  puts Mustache.render(
+    File.open("templates/index.html.mustache").read,
+    :posts => posts)
+end
