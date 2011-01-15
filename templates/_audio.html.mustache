@@ -1,5 +1,8 @@
 <div class="audio">
-  <a href="/audio/{{file}}">Download</a>
+  <object type="application/x-shockwave-flash" data="/flash/player_mp3.swf" width="200" height="20">
+    <param name="movie" value="player_mp3.swf" />
+    <param name="FlashVars" value="mp3=/audio/{{file}}" />
+  </object>
 
   <p class="meta">
     {{formatted_date}} |
