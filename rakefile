@@ -6,10 +6,14 @@ class Post < Mustache
   include Comparable
 
   def initialize(file_path)
-    @path = file_path
-    @meta, @body = File.open(@path).read.split(/\n\n/, 2)
+    @file_path = file_path
+    @meta, @body = File.open(@file_path).read.split(/\n\n/, 2)
     @meta = YAML.load(@meta)
     self.template = File.open("templates/_#{type}.html.mustache").read
+
+    File.open("public/#{url}", "w") do |index|
+      index.write(Layout.new { render })
+    end
   end
 
   def self.all
@@ -36,6 +40,10 @@ class Post < Mustache
     @meta["type"] || "post"
   end
 
+  def url
+    @file_path.gsub(/md$/, "html")
+  end
+
   def <=>(other)
     self.date <=> other.date
   end
@@ -43,13 +51,22 @@ end
 
 class Layout < Mustache
   self.template_file = "templates/layout.html.mustache"
+
+  def initialize
+    self[:yield] = yield
+    render
+  end
 end
 
 task :build do |t|
-  layout = Layout.new
-  layout[:yield] = Mustache.render(
-    File.open("templates/index.html.mustache").read,
-    :posts => Post.all)
+  FileUtils.rm_rf("public/posts")
+  FileUtils.mkdir("public/posts")
+
+  layout = Layout.new do
+    Mustache.render(
+      File.open("templates/index.html.mustache").read,
+      :posts => Post.all)
+  end
 
   File.open("public/index.html", "w") do |index|
     index.write(layout.render)

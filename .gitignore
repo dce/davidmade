@@ -1,2 +1,3 @@
 .rvmrc
 public/index.html
+public/posts/*.html
