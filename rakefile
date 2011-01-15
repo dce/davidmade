@@ -12,6 +12,10 @@ class Post < Mustache
     self.template = File.open("templates/_#{type}.html.mustache").read
   end
 
+  def self.all
+    Dir.glob("posts/*").map {|f| new(f) }.sort.reverse
+  end
+
   def date
     Date.parse(@meta["date"])
   end
@@ -37,10 +41,17 @@ class Post < Mustache
   end
 end
 
-task :build do |t|
-  posts = Dir.glob("posts/*").map {|f| Post.new(f) }
+class Layout < Mustache
+  self.template_file = "templates/layout.html.mustache"
+end
 
-  puts Mustache.render(
+task :build do |t|
+  layout = Layout.new
+  layout[:yield] = Mustache.render(
     File.open("templates/index.html.mustache").read,
-    :posts => posts.sort.reverse)
+    :posts => Post.all)
+
+  File.open("public/index.html", "w") do |index|
+    index.write(layout.render)
+  end
 end
