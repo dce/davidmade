@@ -1,0 +1,40 @@
+body {
+  font-family: georgia, sans-serif;
+  width: 600px;
+  margin: 10px 20px;
+}
+
+a {
+  color: black;
+  background-color: #FF9;
+  padding: 0 3px;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid black;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+div.post {
+  border-top: 1px dotted #ccc;
+}
+
+div.audio {
+  padding-top: 20px;
+}
+
+p.meta {
+  font-style: italic;
+  color: #aaa;
+  font-size: .8em;
+  text-align: right;
+}
+
+div.footer {
+  border-top: 1px dotted #ccc;
+  padding-top: 15px;
+}
