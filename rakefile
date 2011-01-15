@@ -57,14 +57,20 @@ class Layout < Mustache
   end
 end
 
+class Index < Mustache
+  self.template_file = "templates/index.html.mustache"
+
+  def initialize(posts)
+    self[:posts] = posts
+  end
+end
+
 task :build do |t|
   FileUtils.rm_rf("public/posts")
   FileUtils.mkdir("public/posts")
 
   layout = Layout.new do
-    Mustache.render(
-      File.open("templates/index.html.mustache").read,
-      :posts => Post.all)
+    Index.new(Post.all).render
   end
 
   File.open("public/index.html", "w") do |index|
