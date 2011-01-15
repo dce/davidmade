@@ -2,11 +2,12 @@ require 'mustache'
 require 'yaml'
 require 'rdiscount'
 
-class Post
+class Post < Mustache
   def initialize(file_path)
     @path = file_path
     @meta, @body = File.open(@path).read.split(/\n\n/, 2)
     @meta = YAML.load(@meta)
+    self.template = File.open("templates/_#{type}.html.mustache").read
   end
 
   def title
@@ -15,6 +16,10 @@ class Post
 
   def body
     RDiscount.new(@body).to_html
+  end
+
+  def type
+    "post"
   end
 end
 
