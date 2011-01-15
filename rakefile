@@ -12,7 +12,7 @@ class Post < Mustache
     self.template = File.open("templates/_#{type}.html.mustache").read
 
     File.open("public/#{url}", "w") do |index|
-      index.write(Layout.new { render })
+      index.write(Layout.new { render }.render)
     end
   end
 
@@ -54,7 +54,6 @@ class Layout < Mustache
 
   def initialize
     self[:yield] = yield
-    render
   end
 end
 
@@ -71,4 +70,6 @@ task :build do |t|
   File.open("public/index.html", "w") do |index|
     index.write(layout.render)
   end
+
+  puts layout.render
 end
