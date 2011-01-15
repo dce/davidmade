@@ -12,7 +12,9 @@ class Post < Mustache
     self.template = File.open("templates/_#{type}.html.mustache").read
 
     File.open("public/#{url}", "w") do |index|
-      index.write(Layout.new { render }.render)
+      layout = Layout.new { render }
+      layout[:title] = [title, "DavidMade"].compact * " - "
+      index.write(layout.render)
     end
   end
 
@@ -56,8 +58,9 @@ end
 class Layout < Mustache
   self.template_file = "templates/layout.html.mustache"
 
-  def initialize
+  def initialize(title = nil)
     self[:yield] = yield
+    self[:title] = title || "Davidmade"
   end
 end
 
