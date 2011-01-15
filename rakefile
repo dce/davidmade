@@ -14,12 +14,16 @@ class Post < Mustache
     @meta["title"]
   end
 
+  def file
+    @meta["file"]
+  end
+
   def body
-    RDiscount.new(@body).to_html
+    RDiscount.new(@body).to_html if @body
   end
 
   def type
-    "post"
+    @meta["type"] || "post"
   end
 end
 
