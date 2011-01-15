@@ -1,37 +1,41 @@
 body {
-  font-family: georgia, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   width: 600px;
-  margin: 10px 20px;
-  line-height: 1.5;
+  margin: 10px 20px 20px;
+  line-height: 1.6;
 }
 
 a {
-  color: black;
-  background-color: #FF9;
-  padding: 0 3px;
+  color: #678;
+  /* background-color: #FF9;
+  padding: 0 3px; */
   text-decoration: none;
 }
 
 a:hover {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ddd;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p {
   font-weight: normal;
+  margin: 0 0 10px;
+}
+
+h2 {
+  font-size: 1.3em;
 }
 
 div.post {
+  padding-top: 12px;
   border-top: 1px dotted #ccc;
 }
 
-div.audio {
-  padding-top: 20px;
+.meta {
+  color: #aaa;
+  font-size: .8em;
 }
 
 p.meta {
-  font-style: italic;
-  color: #aaa;
-  font-size: .8em;
   text-align: right;
 }
 
