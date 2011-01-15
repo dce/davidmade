@@ -24,6 +24,10 @@ class Post < Mustache
     Date.parse(@meta["date"])
   end
 
+  def formatted_date
+    date.strftime("%b %e, %Y")
+  end
+
   def title
     @meta["title"]
   end
