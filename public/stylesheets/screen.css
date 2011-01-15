@@ -1,14 +1,11 @@
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  width: 600px;
+  font: 13px/1.5 Helvetica;
+  width: 500px;
   margin: 10px 20px 20px;
-  line-height: 1.6;
 }
 
 a {
   color: #678;
-  /* background-color: #FF9;
-  padding: 0 3px; */
   text-decoration: none;
 }
 
@@ -26,7 +23,7 @@ h2 {
 }
 
 div.post {
-  padding-top: 12px;
+  padding-top: 10px;
   border-top: 1px dotted #ccc;
 }
 
