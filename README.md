@@ -12,7 +12,7 @@ This whole thing's done with Ruby and Rake. You'll need the [Mustache][mus] and 
 
 ## Running Locally
 
-Run `rake build` to generate the static HTML pages. To view your site, go into the `public` directory and run `python -m SimpleHTTPServer`, then head to <http://localhost:8000> in your browser.
+Run `rake build` to generate the static HTML pages. To view your site, run `rake server`, then head to <http://localhost:8000> in your browser.
 
 Any change you make to the content or site structure will require a new `rake build`.
 

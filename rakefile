@@ -27,3 +27,7 @@ task :new_post, [:file_name] do |t, args|
 
   exec "mate posts/#{args.file_name}.md"
 end
+
+task :server do |t|
+ sh "cd ./public && python -m SimpleHTTPServer"
+end
