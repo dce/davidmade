@@ -5,6 +5,8 @@ require 'rdiscount'
 Dir.glob('lib/*.rb').each {|f| require f }
 
 task :build do |t|
+  print "Rebuilding... "
+
   FileUtils.rm_rf("public/posts")
   FileUtils.mkdir("public/posts")
 
@@ -15,8 +17,7 @@ task :build do |t|
   File.open("public/index.html", "w") do |index|
     index.write(layout.render)
   end
-
-  puts layout.render
+  puts "done."
 end
 
 task :new_post, [:file_name] do |t, args|
