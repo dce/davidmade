@@ -1,7 +1,9 @@
 class Index < Mustache
-  self.template_file = "templates/index.html.mustache"
-
-  def initialize(posts)
+  def initialize(posts, opts = {})
     self[:posts] = posts
+    self[:updated_at] = posts.first.date
+
+    template_file = "templates/index.#{ opts[:format] || "html" }.mustache"
+    self.template = open(template_file).read
   end
 end

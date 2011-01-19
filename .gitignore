@@ -1,3 +1,4 @@
 .rvmrc
 public/index.html
+public/index.atom
 public/posts/*.html

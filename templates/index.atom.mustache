@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Davidmade</title>
+  <link href="http://davidmade.com/" />
+  <updated>{{updated_at}}T00:00:00Z</updated>
+  <author>
+    <name>David Eisinger</name>
+  </author>
+  <id>tag:davidmade.com,2011:/index.atom</id>
+
+  {{#posts}}
+    <entry>
+      <title>{{title}}</title>
+      <link href="http://davidmade.com{{url}}" />
+      <id>tag:davidmade.com,{{date}}:/{{url}}</id>
+      <updated>{{date}}T00:00:00Z</updated>
+      <summary>{{description}}</summary>
+    </entry>
+  {{/posts}}
+</feed>

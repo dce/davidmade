@@ -6,9 +6,9 @@ class Post < Mustache
     @file_path = file_path
     @meta, @body = File.open(@file_path).read.split(/\n\n/, 2)
     @meta = YAML.load(@meta)
-    self.template = File.open("templates/_#{type}.html.mustache").read
+    self.template = open("templates/_#{type}.html.mustache").read
 
-    File.open("public/#{url}", "w") do |index|
+    open("public/#{url}", "w") do |index|
       layout = Layout.new([title, "DavidMade"].compact * " - ") { render }
       index.write(layout.render)
     end

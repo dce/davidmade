@@ -15,8 +15,13 @@ task :build do |t|
   end
 
   File.open("public/index.html", "w") do |index|
-    index.write(layout.render)
+    index.write layout.render
   end
+
+  File.open("public/index.atom", "w") do |feed|
+    feed.write Index.new(Post.all, :format => :atom).render
+  end
+
   puts "done."
 end
 
