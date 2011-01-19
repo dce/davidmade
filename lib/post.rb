@@ -30,6 +30,10 @@ class Post < Mustache
     @meta["title"]
   end
 
+  def title_or_url
+    title || url
+  end
+
   def file
     @meta["file"]
   end
