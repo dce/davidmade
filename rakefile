@@ -26,9 +26,11 @@ task :build do |t|
 end
 
 task :new_post, [:file_name] do |t, args|
+  title = args.file_name.split("-").map {|w| w.capitalize } * " "
+
   File.open("posts/#{args.file_name}.md", "w") do |file|
-    file.write "title:\n"
-    file.write "date: #{Date.today}"
+    file.write "title: \"#{title}\"  \n"
+    file.write "date: #{Date.today}\n\n"
   end
 
   exec "mate posts/#{args.file_name}.md"
