@@ -18,12 +18,16 @@ class Post < Mustache
     Dir.glob("posts/*").map {|f| new(f) }.sort.reverse
   end
 
+  def date_time
+    DateTime.parse(@meta["date"].to_s)
+  end
+
   def date
-    @meta["date"]
+    date_time.strftime("%Y-%m-%d")
   end
 
   def formatted_date
-    date.strftime("%b %e, %Y")
+    date_time.strftime("%b %e, %Y")
   end
 
   def title
@@ -50,15 +54,11 @@ class Post < Mustache
     @file_path.gsub(/md$/, "html")
   end
 
-  def last_modified
-    File::mtime(@file_path)
-  end
-
   def timestamp
-    last_modified.strftime("%Y-%m-%dT%H:%M:%SZ")
+    date_time.strftime("%Y-%m-%dT%H:%M:%SZ")
   end
 
   def <=>(other)
-    [self.date, self.last_modified] <=> [other.date, other.last_modified]
+    date <=> other.date
   end
 end
