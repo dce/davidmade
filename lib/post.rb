@@ -54,6 +54,10 @@ class Post < Mustache
     File::mtime(@file_path)
   end
 
+  def timestamp
+    last_modified.strftime("%Y-%m-%dT%H:%M:%SZ")
+  end
+
   def <=>(other)
     [self.date, self.last_modified] <=> [other.date, other.last_modified]
   end
