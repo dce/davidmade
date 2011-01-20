@@ -15,7 +15,13 @@
       <link href="http://davidmade.com/{{url}}" />
       <id>tag:davidmade.com,{{date}}:/{{url}}</id>
       <updated>{{timestamp}}</updated>
-      <content type="html">{{body}}</content>
+      <content type="html">
+        {{body}}
+
+        {{#file}}
+          &lt;a href="/audio/{{file}}"&gt;Download MP3&lt;/a&gt;
+        {{/file}}
+      </content>
     </entry>
   {{/posts}}
 </feed>
