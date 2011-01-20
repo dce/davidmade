@@ -1,4 +1,4 @@
 .rvmrc
-public/index.html
+public/*.html
 public/index.atom
 public/posts/*.html

@@ -10,16 +10,26 @@ task :build do |t|
   FileUtils.rm_rf("public/posts")
   FileUtils.mkdir("public/posts")
 
-  layout = Layout.new do
-    Index.new(Post.all).render
-  end
+  posts = Post.all
+  per_page = 10
+  last_page = (posts.size - 1) / per_page
 
-  File.open("public/index.html", "w") do |index|
-    index.write layout.render
+  0.upto(last_page) do |page|
+    layout = Layout.new do
+      index = Index.new(posts[page * per_page, per_page])
+      index[:next_page] = page + 2 unless page == last_page
+      index.render
+    end
+
+    file_name = page == 0 ? "index" : page + 1
+
+    File.open("public/#{file_name}.html", "w") do |index|
+      index.write layout.render
+    end
   end
 
   File.open("public/index.atom", "w") do |feed|
-    feed.write Index.new(Post.all, :format => :atom).render
+    feed.write Index.new(posts[0, per_page], :format => :atom).render
   end
 
   puts "done."

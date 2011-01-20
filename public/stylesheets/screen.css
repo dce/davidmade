@@ -57,7 +57,7 @@ p.meta span.divider {
   color: #ddd;
 }
 
-div.footer {
+div.next-page, div.footer {
   border-top: 1px dotted #ccc;
-  padding-top: 15px;
+  padding: 15px 0 12px;
 }
