@@ -33,7 +33,7 @@ task :new_post, [:file_name] do |t, args|
     file.write "date: #{Date.today}\n\n"
   end
 
-  exec "mate posts/#{args.file_name}.md"
+  exec "mate posts/#{args.file_name}.md --line 4"
 end
 
 task :server do |t|
