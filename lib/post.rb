@@ -59,6 +59,6 @@ class Post < Mustache
   end
 
   def <=>(other)
-    date <=> other.date
+    date_time <=> other.date_time
   end
 end
