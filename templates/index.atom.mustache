@@ -3,7 +3,7 @@
   <title>Davidmade</title>
   <link rel="self" href="http://davidmade.com/index.atom" />
   <link rel="alternate" href="http://davidmade.com/" />
-  <updated>{{updated_at}}T00:00:00Z</updated>
+  <updated>{{updated_at}}</updated>
   <author>
     <name>David Eisinger</name>
   </author>
@@ -11,7 +11,7 @@
 
   {{#posts}}
     <entry>
-      <title type="html">{{title_or_url}}</title>
+      <title type="html">{{title}}</title>
       <link href="http://davidmade.com/{{url}}" />
       <id>tag:davidmade.com,{{date}}:/{{url}}</id>
       <updated>{{timestamp}}</updated>
@@ -19,7 +19,9 @@
         {{body}}
 
         {{#file}}
-          &lt;a href="/audio/{{file}}"&gt;Download MP3&lt;/a&gt;
+          &lt;a href="/audio/{{file}}"&gt;
+            &amp;ldquo;{{title}}&amp;rdquo; (MP3)
+          &lt;/a&gt;
         {{/file}}
       </content>
     </entry>
