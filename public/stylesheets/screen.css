@@ -1,11 +1,33 @@
+@font-face {
+  font-family: 'OFLSortsMillGoudyRegular';
+  src: url('/fonts/oflgoudystm-webfont.eot');
+  src: url('/fonts/oflgoudystm-webfont.eot?iefix') format('eot'),
+     url('/fonts/oflgoudystm-webfont.woff') format('woff'),
+     url('/fonts/oflgoudystm-webfont.ttf') format('truetype'),
+     url('/fonts/oflgoudystm-webfont.svg#webfontIc61zr8A') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OFLSortsMillGoudyItalic';
+  src: url('/fonts/oflgoudystm-italic-webfont.eot');
+  src: url('/fonts/oflgoudystm-italic-webfont.eot?iefix') format('eot'),
+     url('/fonts/oflgoudystm-italic-webfont.woff') format('woff'),
+     url('/fonts/oflgoudystm-italic-webfont.ttf') format('truetype'),
+     url('/fonts/oflgoudystm-italic-webfont.svg#webfontVn2YY95h') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
 body {
-  font: 13px/1.5 Helvetica, Arial, sans-serif;
+  font: 14px/1.5 "OFLSortsMillGoudyRegular", Georgia, serif;
   width: 500px;
   margin: 10px 20px 20px;
 }
 
 a {
-  color: #678;
+  color: #4E3020;
   text-decoration: none;
 }
 
@@ -19,14 +41,8 @@ h1, h2, h3, p {
 }
 
 h1 {
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  font-size: 1.3em;
+  font-size: 2em;
   margin-top: 15px;
-}
-
-h1 a {
-  color: #ccc;
 }
 
 h2 {
@@ -44,7 +60,9 @@ div.audio h2 {
 }
 
 .meta {
-  color: #aaa;
+  font-family: "OFLSortsMillGoudyItalic", Georgia;
+  font-style: italic;
+  color: #999;
   font-size: .8em;
 }
 
@@ -53,12 +71,13 @@ p.meta {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #f5f5f5;
+  background-color: #f6f6f6;
   padding: 3px 5px;
 }
 
 p.meta span.divider {
-  color: #ddd;
+  padding: 0 2px;
+  color: #ccc;
 }
 
 div.next-page, div.footer {
