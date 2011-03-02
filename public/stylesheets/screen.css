@@ -39,6 +39,10 @@ div.post {
   position: relative;
 }
 
+div.audio h2 {
+  display: none;
+}
+
 .meta {
   color: #aaa;
   font-size: .8em;
