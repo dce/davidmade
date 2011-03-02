@@ -25,7 +25,7 @@ To deploy your site to a remote server, follow [these instructions][git] to set 
 
 With that in place, your site will rebuild every time you do a `git push`.
 
-* * *
+--
 
 Thanks for checking out my code, and don't hesitate to drop me a line if you have any questions or suggestions for improvement.
 
