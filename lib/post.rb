@@ -47,7 +47,7 @@ class Post < Mustache
   end
 
   def type
-    @meta["type"] || "post"
+    @meta["type"] || "text"
   end
 
   def url
