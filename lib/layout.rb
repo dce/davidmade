@@ -14,7 +14,7 @@ class Layout < Mustache
     Post.types.map do |type|
       {
         :label => type.capitalize,
-        :url => "/#{type}",
+        :url => "/#{type}/",
         :active => (type == self[:post_type])
       }
     end
