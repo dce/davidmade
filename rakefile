@@ -4,6 +4,39 @@ require 'rdiscount'
 
 Dir.glob('lib/*.rb').each {|f| require f }
 
+PER_PAGE = 10
+
+def generate_indexes(posts, type = nil)
+  directory = "public"
+
+  if type
+    posts = posts.select {|p| p.type == type }
+    directory << "/#{type}"
+    FileUtils.mkdir(directory) rescue nil
+  end 
+
+  last_page = (posts.size - 1) / PER_PAGE
+
+  0.upto(last_page) do |page|
+    layout = Layout.new(:post_type => type) do
+      index = Index.new(posts[page * PER_PAGE, PER_PAGE])
+      index[:post_type] = type
+      index[:next_page] = page + 2 unless page == last_page
+      index.render
+    end
+
+    file_name = page == 0 ? "index" : page + 1
+
+    File.open("#{directory}/#{file_name}.html", "w") do |index|
+      index.write layout.render
+    end
+  end
+
+  File.open("#{directory}/index.atom", "w") do |feed|
+    feed.write Index.new(posts[0, PER_PAGE], :format => :atom).render
+  end
+end
+
 task :build do |t|
   print "Rebuilding... "
 
@@ -11,25 +44,12 @@ task :build do |t|
   FileUtils.mkdir("public/posts")
 
   posts = Post.all
-  per_page = 10
-  last_page = (posts.size - 1) / per_page
 
-  0.upto(last_page) do |page|
-    layout = Layout.new do
-      index = Index.new(posts[page * per_page, per_page])
-      index[:next_page] = page + 2 unless page == last_page
-      index.render
-    end
+  posts.each {|p| p.write }
 
-    file_name = page == 0 ? "index" : page + 1
-
-    File.open("public/#{file_name}.html", "w") do |index|
-      index.write layout.render
-    end
-  end
-
-  File.open("public/index.atom", "w") do |feed|
-    feed.write Index.new(posts[0, per_page], :format => :atom).render
+  generate_indexes(posts)
+  Post.types.each do |type|
+    generate_indexes(posts, type)
   end
 
   puts "done."

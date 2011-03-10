@@ -24,6 +24,7 @@ body {
   font: 14px/1.5 "OFLSortsMillGoudyRegular", Georgia, serif;
   width: 500px;
   margin: 10px 20px 20px;
+  position: relative;
 }
 
 a {
@@ -48,6 +49,23 @@ h1 {
 h2 {
   font-size: 1.3em;
 }
+
+ul.post-types {
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  top: 7px;
+  left: 150px;
+}
+
+ul.post-types li {
+  float: left;
+  margin-right: 5px;
+}
+
+ul.post-types li.active a {
+  border-bottom: 1px solid #ddd;
+} 
 
 div.post {
   padding-top: 10px;

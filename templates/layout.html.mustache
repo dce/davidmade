@@ -9,6 +9,14 @@
   <body>
     <h1><a href="/">Davidmade</a></h1>
 
+    <ul class="meta post-types">
+      {{#post_types}}
+        <li class="{{#active}}active{{/active}}">
+          <a href="{{url}}">{{label}}</a>
+        </li>
+      {{/post_types}}
+    </ul>
+
     {{{yield}}}
 
     <div class="footer meta">
