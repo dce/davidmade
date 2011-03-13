@@ -7,22 +7,24 @@
   </head>
 
   <body>
-    <h1><a href="/">Davidmade</a></h1>
+    <div class="container">
+      <h1><a href="/">Davidmade</a></h1>
 
-    <ul class="meta post-types">
-      {{#post_types}}
-        <li class="{{#active}}active{{/active}}">
-          <a href="{{url}}">{{label}}</a>
-        </li>
-      {{/post_types}}
-    </ul>
+      <ul class="meta post-types">
+        {{#post_types}}
+          <li class="{{#active}}active{{/active}}">
+            <a href="{{url}}">{{label}}</a>
+          </li>
+        {{/post_types}}
+      </ul>
 
-    {{{yield}}}
+      {{{yield}}}
 
-    <div class="footer meta">
-      This is a <a href="http://davideisinger.com">David Eisinger</a> production.
-      View <a href="https://github.com/dce/davidmade">the source</a> or
-      subscribe to <a href="/index.atom">the feed</a>.
+      <div class="footer meta">
+        This is a <a href="http://davideisinger.com">David Eisinger</a> production.
+        View <a href="https://github.com/dce/davidmade">the source</a> or
+        subscribe to <a href="/index.atom">the feed</a>.
+      </div>
     </div>
   </body>
 </html>

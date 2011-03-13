@@ -1,10 +1,21 @@
 @font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url('/fonts/League_Gothic-webfont.eot');
+  src: url('/fonts/League_Gothic-webfont.eot?iefix') format('eot'),
+    url('/fonts/League_Gothic-webfont.woff') format('woff'),
+    url('/fonts/League_Gothic-webfont.ttf') format('truetype'),
+    url('/fonts/League_Gothic-webfont.svg#webfontFHzvtkso') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'OFLSortsMillGoudyRegular';
   src: url('/fonts/oflgoudystm-webfont.eot');
   src: url('/fonts/oflgoudystm-webfont.eot?iefix') format('eot'),
-     url('/fonts/oflgoudystm-webfont.woff') format('woff'),
-     url('/fonts/oflgoudystm-webfont.ttf') format('truetype'),
-     url('/fonts/oflgoudystm-webfont.svg#webfontIc61zr8A') format('svg');
+    url('/fonts/oflgoudystm-webfont.woff') format('woff'),
+    url('/fonts/oflgoudystm-webfont.ttf') format('truetype'),
+    url('/fonts/oflgoudystm-webfont.svg#webfontIc61zr8A') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -13,27 +24,31 @@
   font-family: 'OFLSortsMillGoudyItalic';
   src: url('/fonts/oflgoudystm-italic-webfont.eot');
   src: url('/fonts/oflgoudystm-italic-webfont.eot?iefix') format('eot'),
-     url('/fonts/oflgoudystm-italic-webfont.woff') format('woff'),
-     url('/fonts/oflgoudystm-italic-webfont.ttf') format('truetype'),
-     url('/fonts/oflgoudystm-italic-webfont.svg#webfontVn2YY95h') format('svg');
+    url('/fonts/oflgoudystm-italic-webfont.woff') format('woff'),
+    url('/fonts/oflgoudystm-italic-webfont.ttf') format('truetype'),
+    url('/fonts/oflgoudystm-italic-webfont.svg#webfontVn2YY95h') format('svg');
   font-weight: normal;
   font-style: italic;
 }
 
 body {
   font: 14px/1.5 "OFLSortsMillGoudyRegular", Georgia, serif;
-  width: 500px;
-  margin: 10px 20px 20px;
-  position: relative;
+  background-color: #ff6600;
 }
 
 a {
-  color: #4E3020;
+  color: black;
   text-decoration: none;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
 }
 
 a:hover {
-  border-bottom: 1px solid #ddd;
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+div.container {
+  width: 500px;
+  margin: 20px auto;
 }
 
 h1, h2, h3, p {
@@ -42,34 +57,54 @@ h1, h2, h3, p {
 }
 
 h1 {
-  font-size: 2em;
+  font: 6em "LeagueGothicRegular", sans-serif;
   margin-top: 15px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 2px 2px #ff6600, 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 a {
+  color: white;
+  border: none;
 }
 
 h2 {
-  font-size: 1.3em;
+  font: 2em "LeagueGothicRegular", sans-serif;
+  letter-spacing: 0.1em;
+}
+
+h2 a {
+  color: rgba(0, 0, 0, 0.2);
+  border: none;
 }
 
 ul.post-types {
   list-style-type: none;
+  text-align: center;
   padding: 0;
-  position: absolute;
-  top: 7px;
-  left: 150px;
+  margin-top: -10px;
 }
 
 ul.post-types li {
-  float: left;
+  display: inline;
+}
+
+ul.post-types li a {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 3px 6px;
   margin-right: 5px;
+  border-radius: 5px;
 }
 
 ul.post-types li.active a {
-  border-bottom: 1px solid #ddd;
+  border-color: rgba(0, 0, 0, 0.4);
 } 
 
 div.post {
-  padding-top: 10px;
-  border-top: 1px dotted #ccc;
+  padding: 20px 0 10px;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
@@ -78,10 +113,8 @@ div.audio h2 {
 }
 
 .meta {
-  font-family: "OFLSortsMillGoudyItalic", Georgia;
-  font-style: italic;
-  color: #999;
-  font-size: .8em;
+  font: italic 0.8em "OFLSortsMillGoudyItalic", Georgia;
+  color: black;
 }
 
 p.meta {
@@ -89,16 +122,16 @@ p.meta {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #f6f6f6;
+  background-color: rgba(0, 0, 0, 0.1);
   padding: 3px 5px;
 }
 
 p.meta span.divider {
   padding: 0 2px;
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 div.next-page, div.footer {
-  border-top: 1px dotted #ccc;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
   padding: 15px 0 12px;
 }
