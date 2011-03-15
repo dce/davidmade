@@ -30,4 +30,4 @@ piano.
 
 Having this whole site in a git repo has made both posting to and
 customizing the site much more enjoyable than having to go through a web
-interface.
+interface. I WILL NEVER GO BACK.
