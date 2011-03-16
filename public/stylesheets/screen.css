@@ -11,7 +11,7 @@
 
 body {
   font: 14px/1.5 Georgia, serif;
-  background-color: #c59d15;
+  background-color: #e8ae1c;
 }
 
 a {
@@ -41,7 +41,7 @@ h1 {
   padding-left: 0.2em;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: 2px 2px #c59d15, 5px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px #e8ae1c, 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 h1 a {
