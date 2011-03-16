@@ -1,4 +1,4 @@
-title: "Look-&amp;-Feel Updates; Content Filtering"  
+title: "Style Updates; Content Filtering"  
 date: 2011-03-13
 
 I spent some time working on the site this weekend, including
