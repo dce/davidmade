@@ -60,10 +60,10 @@ task :new_post, [:file_name] do |t, args|
 
   File.open("posts/#{args.file_name}.md", "w") do |file|
     file.write "title: \"#{title}\"  \n"
-    file.write "date: #{Date.today}\n\n"
+    file.write "date: #{Date.today}\n\n\n"
   end
 
-  exec "mate posts/#{args.file_name}.md --line 4"
+  exec "mvim posts/#{args.file_name}.md +4"
 end
 
 task :server do |t|
