@@ -34,7 +34,7 @@ class Post < Mustache
   end
 
   def formatted_date
-    date_time.strftime("%b %e, %Y")
+    date_time.strftime("%a, %b %e, %Y")
   end
 
   def title
