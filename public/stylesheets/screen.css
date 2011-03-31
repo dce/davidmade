@@ -88,6 +88,12 @@ div.post {
   position: relative;
 }
 
+div.post pre {
+  padding-left: 20px;
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 div.audio h2 {
   display: none;
 }
