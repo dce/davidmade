@@ -11,11 +11,12 @@
 
 body {
   font: 14px/1.5 Georgia, serif;
-  background-color: #e8ae1c;
+  background-color: #b1e8fd;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 a {
-  color: black;
+  color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
 }
@@ -41,7 +42,7 @@ h1 {
   padding-left: 0.2em;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: 2px 2px #e8ae1c, 5px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px #b1e8fd, 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 h1 a {
@@ -50,13 +51,19 @@ h1 a {
 }
 
 h2 {
-  font: 2em "LeagueGothicRegular", sans-serif;
+  font: 1.8em "LeagueGothicRegular", sans-serif;
   letter-spacing: 0.1em;
 }
 
 h2 a {
-  color: #600;
+  color: rgba(0, 0, 0, 0.7);
   border: none;
+}
+
+h2 a .star {
+  position: relative;
+  top: -3px;
+  font-size: .7em;
 }
 
 ul.post-types {
@@ -80,7 +87,7 @@ ul.post-types li a {
 
 ul.post-types li.active a {
   border-color: rgba(0, 0, 0, 0.4);
-} 
+}
 
 div.post {
   padding: 20px 0 10px;
@@ -102,7 +109,7 @@ div.audio h2 {
   font-size: 0.8em;
   font-style: italic;
   line-height: normal;
-  color: black;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 p.meta {
