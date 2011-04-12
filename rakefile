@@ -37,6 +37,7 @@ def generate_indexes(posts, type = nil)
   end
 end
 
+desc "Generate static site files"
 task :build do |t|
   print "Rebuilding... "
 
@@ -55,6 +56,7 @@ task :build do |t|
   puts "done."
 end
 
+desc "Create a new post"
 task :new_post, [:file_name] do |t, args|
   title = args.file_name.split("-").map {|w| w.capitalize } * " "
 
@@ -66,6 +68,7 @@ task :new_post, [:file_name] do |t, args|
   exec "mvim posts/#{args.file_name}.md +4"
 end
 
+desc "Start a local server at http://localhost:8000"
 task :server do |t|
  sh "cd ./public && python -m SimpleHTTPServer"
 end
