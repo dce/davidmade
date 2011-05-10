@@ -14,7 +14,7 @@ class Post < Mustache
   end
 
   def self.types
-    all.map {|p| p.type }.uniq
+    all.map {|p| p.type }.uniq.sort
   end
 
   def write
@@ -43,6 +43,10 @@ class Post < Mustache
 
   def file
     @meta["file"]
+  end
+
+  def href
+    @meta["href"]
   end
 
   def body
