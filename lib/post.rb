@@ -1,12 +1,12 @@
-
 class Post < Mustache
   include Comparable
 
-  def initialize(file_path)
-    @file_path = file_path
-    @meta, @body = File.open(@file_path).read.split(/\n\n/, 2)
-    @meta = YAML.load(@meta)
-    self.template = open("templates/_#{type}.html.mustache").read
+  def self.meta(field, opts = {})
+    define_method(field) { @meta[field.to_s] || opts[:default] }
+  end
+
+  def self.date_format(name, format)
+    define_method(name) { date_time.strftime format }
   end
 
   def self.all
@@ -14,7 +14,23 @@ class Post < Mustache
   end
 
   def self.types
-    all.map {|p| p.type }.uniq.sort
+    all.map(&:type).uniq.sort
+  end
+
+  meta :title
+  meta :file
+  meta :href
+  meta :type, :default => "text"
+
+  date_format :date,            "%Y-%m-%d"
+  date_format :formatted_date,  "%a, %b %e, %Y"
+  date_format :timestamp,       "%Y-%m-%dT%H:%M:%SZ"
+
+  def initialize(file_path)
+    @file_path = file_path
+    @meta, @body = File.open(@file_path).read.split(/\n\n/, 2)
+    @meta = YAML.load(@meta)
+    self.template = open("templates/_#{type}.html.mustache").read
   end
 
   def write
@@ -24,46 +40,20 @@ class Post < Mustache
       index.write(layout.render)
     end
   end
-  
+
   def date_time
     DateTime.parse(@meta["date"].to_s)
-  end
-
-  def date
-    date_time.strftime("%Y-%m-%d")
-  end
-
-  def formatted_date
-    date_time.strftime("%a, %b %e, %Y")
-  end
-
-  def title
-    @meta["title"]
-  end
-
-  def file
-    @meta["file"]
-  end
-
-  def href
-    @meta["href"]
   end
 
   def body
     RDiscount.new(@body, :smart).to_html if @body
   end
 
-  def type
-    @meta["type"] || "text"
-  end
-
   def url
-    @file_path.gsub(/md$/, "html")
+    @file_path.gsub /md$/, "html"
   end
 
-  def timestamp
-    date_time.strftime("%Y-%m-%dT%H:%M:%SZ")
-  end
+  private
 
   def <=>(other)
     date_time <=> other.date_time
