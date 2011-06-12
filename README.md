@@ -1,7 +1,9 @@
 Davidmade
 =========
 
-This is a simple app to generate a Tumblr-style blog backed by a Git repo. It's what's powering <http://davidmade.com>. The site is automatically regenerated whenever I do a `git push`.
+This is a simple app to generate a [Tumblr][tum]-style blog backed by a Git repo. It's what's powering <http://davidmade.com>. The site is automatically regenerated whenever I do a `git push`.
+
+  [tum]: http://www.tumblr.com/
 
 ## Requirements
 
