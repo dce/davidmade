@@ -103,7 +103,6 @@ div.post pre {
 }
 
 div.post blockquote {
-  font-style: italic;
   color: rgba(0, 0, 0, 0.5);
   margin-left: 20px;
 }
