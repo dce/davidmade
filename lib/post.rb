@@ -53,6 +53,10 @@ class Post < Mustache
     @file_path.gsub /md$/, "html"
   end
 
+  def source_url
+    "http://raw.github.com/dce/davidmade/master/#{@file_path}"
+  end
+
   private
 
   def <=>(other)
