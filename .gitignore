@@ -3,6 +3,6 @@ public/*.html
 public/index.atom
 public/text/*.html
 public/text/index.atom
-public/audio/*.html
-public/audio/index.atom
+public/audio
+public/photo
 public/posts/*.html
