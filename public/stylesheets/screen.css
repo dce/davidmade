@@ -106,8 +106,13 @@ div.post blockquote {
   margin-left: 20px;
 }
 
-div.audio h2 {
+div.audio h2, div.photo h2 {
   display: none;
+}
+
+div.photo img {
+  background-color: white;
+  padding: 10px;
 }
 
 .meta {
