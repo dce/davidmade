@@ -8,4 +8,4 @@ I got the chance to stop in at [Need Supply Co.][nsc] while visiting Richmond la
   [nsc]: http://needsupply.com/
   [hsp]: http://needsupply.com/mens/brands/the-hill-side/selvedge-pocket-square-1.html
 
-Instead, I stopped by a local fabric store and bought a few kinds of linen cloth, which I took to a taylor and asked to have cut up into 13" squares with the edges sewn up. I picked them up today, and I'm really pleased with the results.
+Instead, I stopped by a local fabric store and bought a few kinds of linen cloth, which I took to a tailor and asked to have cut up into 13" squares with the edges sewn up. I picked them up today, and I'm really pleased with the results.
