@@ -16,13 +16,17 @@
       <id>tag:davidmade.com,{{date}}:/{{url}}</id>
       <updated>{{timestamp}}</updated>
       <content type="html">
+        {{#photo?}}
+          &lt;img src="/images/{{file}}" width="480" height="360" /&gt;
+        {{/photo?}}
+
         {{body}}
 
-        {{#file}}
+        {{#audio?}}
           &lt;a href="/audio/{{file}}"&gt;
             &amp;ldquo;{{title}}&amp;rdquo; (MP3)
           &lt;/a&gt;
-        {{/file}}
+        {{/audio?}}
       </content>
     </entry>
   {{/posts}}

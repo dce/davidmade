@@ -5,6 +5,8 @@ context "A post" do
     setup { Post.new('test/sample_data/text.md') }
 
     asserts("type") { topic.type }.equals("text")
+    asserts("text?") { topic.text? }
+    denies("audio?") { topic.audio? }
     asserts("title") { topic.title }.equals("DOIT")
     asserts("file") { topic.file }.nil
     asserts("href") { topic.href }.nil
@@ -20,6 +22,8 @@ context "A post" do
     setup { Post.new('test/sample_data/audio.md') }
     asserts("type") { topic.type }.equals("audio")
     asserts("file") { topic.file }.equals("solo-piano-1.mp3")
+    denies("text?") { topic.text? }
+    asserts("audio?") { topic.audio? }
   end
 
   context "with a link" do

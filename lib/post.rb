@@ -57,9 +57,13 @@ class Post < Mustache
     "http://raw.github.com/dce/davidmade/master/#{@file_path}"
   end
 
-  private
-
   def <=>(other)
     date_time <=> other.date_time
+  end
+
+  types.each do |type_name|
+    define_method "#{type_name}?" do
+      type == type_name
+    end
   end
 end
