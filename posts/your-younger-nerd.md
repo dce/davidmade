@@ -1,4 +1,5 @@
 title: "Your Younger Nerd"  
+type: quote  
 date: 2011-05-04
 
 I've been working my way through Neal Stephenson's *[Cryptonomicon][cry]* over the past few months. Great book. [This passage][gbk], in particular, really struck a chord with me:

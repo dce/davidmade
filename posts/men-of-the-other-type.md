@@ -1,4 +1,5 @@
 title: "Men of the Other Type"  
+type: quote  
 date: 2011-06-17
 
 Another [golden nugget][gbk] from [Cryptonomicon][cry]:
