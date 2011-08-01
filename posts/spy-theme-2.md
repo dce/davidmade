@@ -3,4 +3,4 @@ type: audio
 file: spy-theme-2.mp3  
 date: 2011-07-31
 
-Little riff that came out of playing with some friends last night.
+I came up with this riff last night while playing with a couple friends. Twelve-bar blues in D minor.
