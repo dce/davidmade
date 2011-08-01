@@ -26,6 +26,11 @@ a:hover {
   border-color: rgba(0, 0, 0, 0.3);
 }
 
+strong {
+  background-color: #ff9;
+  font-weight: normal;
+}
+
 div.container {
   width: 500px;
   margin: 20px auto;

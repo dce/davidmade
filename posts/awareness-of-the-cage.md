@@ -6,7 +6,7 @@ This is my favorite passage from *[Infinite Jest][inf]*. It's an exchange betwee
 LaMont Chu, one of the players at the Enfield Tennis Academy, and Lyle, a man
 who sits in the workout room and offers wisdom in exchange for licking sweat off
 of the perspiring students. Sounds weird, I guess, but it doesn't really even
-register among everything else going on in this book.
+register among everything else going on in this book. Emphasis mine.
 
   > Lyle has a way of sucking on the insides of his cheeks as he listens. Plates
   > of old ridged muscle emerge and subside as he shifts his weight slightly on
@@ -31,8 +31,8 @@ register among everything else going on in this book.
   > almost caves in, thinking. 'LaMont, perhaps they did at first. The first
   > photograph, the first magazine, the gratified surge, the seeing themselves
   > as others see them, the hagiography of image, perhaps. Perhaps the first
-  > time: *enjoyment*. After that, do you trust me, trust me: they do not feel
-  > what you burn for. After the first surge, they care only that their
+  > time: *enjoyment*. **After that, do you trust me, trust me: they do not feel
+  > what you burn for.** After the first surge, they care only that their
   > photographs seem awkward or unflattering, or untrue, or that their privacy,
   > this thing you burn to escape, what they call their privacy is being
   > violated. Something changes. After the first photograph has been in a
@@ -40,8 +40,8 @@ register among everything else going on in this book.
   > much as they fear that their photographs will cease to appear in magazines.
   > They are trapped, just as you are.' 'ls this supposed to be good news'? This
   > is awful news.' 'LaMont, are you willing to listen to a Remark about what is
-  > true?' 'Okeydokey.' 'The truth will set you free. But not until it is
-  > finished with you.' 'Maybe I ought to be getting back.' 'LaMont, the world
+  > true?' 'Okeydokey.' '**The truth will set you free. But not until it is
+  > finished with you.**' 'Maybe I ought to be getting back.' 'LaMont, the world
   > is very old. You have been snared by something untrue. You are deluded. But
   > this is good news. You have been snared by the delusion that envy has a
   > reciprocal. You assume that there is a flip-side to your painful envy of
@@ -59,9 +59,9 @@ register among everything else going on in this book.
   > is that the world is incredibly, incredibly, unbelievably old. You suffer
   > with the stunted desire caused by one of its oldest lies. Do not believe the
   > photographs. Fame is not the exit from any cage.' 'So I'm stuck in the cage
-  > from either side. Fame or tortured envy of fame. There's no way out.' 'You
+  > from either side. Fame or tortured envy of fame. There's no way out.' '**You
   > might consider how escape from a cage must surely require, foremost,
-  > awareness of the fact of the cage. And I believe I see a drop on your
+  > awareness of the fact of the cage.** And I believe I see a drop on your
   > temple, right... there. ...' Etc.
 
 That's an actual [single paragraph][quo] in the book. Whether or not you enjoy
