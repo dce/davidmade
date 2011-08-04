@@ -51,7 +51,7 @@ register among everything else going on in this book. Emphasis mine.
   > envied, admired, is not it feeling. Nor is fame it feeling. There are
   > feelings associated with fame, but few of them are any more enjoyable than
   > the feelings associated with envy of fame.' 'The burning doesn't go away?'
-  > 'What fire dies when you feed it? It is not fame itself they wish to deny
+  > '**What fire dies when you feed it?** It is not fame itself they wish to deny
   > you here. Trust them. There is much fear in fame. Terrible and heavy fear to
   > be pulled and held, carried. Perhaps they want only to keep it off you until
   > you weigh enough to pull it toward yourself.' 'Would I sound ungrateful if I
