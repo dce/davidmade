@@ -56,20 +56,17 @@ h1 a {
   border: none;
 }
 
-h2 {
-  font: 1.8em "LeagueGothicRegular", sans-serif;
-  letter-spacing: 0.1em;
+h1 a:hover {
+  text-shadow: 2px 2px #eee, 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 h2 a {
-  color: rgba(0, 0, 0, 0.7);
+  color: black;
   border: none;
 }
 
-h2 a .star {
-  position: relative;
-  top: -3px;
-  font-size: .7em;
+h2 a:hover {
+  background-color: #ff9;
 }
 
 ul.post-types {
