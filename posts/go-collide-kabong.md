@@ -17,8 +17,7 @@ While it's on my mind, this is my second favorite bit from [Infinite Jest][inf]:
   > when something is in the way when you go between places, no? **Plow ahead:
   > go: collide: _kabong._**'
 
-Not as insightful as the [previous quote][cag], but remarkable use of
-onomatopoeia. Full text available on [Google Books][gbk].
+Not as insightful as the [previous quote][cag], but there's no denying the punctuation and the word 'kabong'. Full text available on [Google Books][gbk].
 
   [cag]: http://davidmade.com/posts/awareness-of-the-cage.html
   [gbk]: http://books.google.com/books?id=Nhe2yvx6hP8C&lpg=PT376&ots=K2GuVg-2sc&pg=PT198#v=onepage&q&f=false
