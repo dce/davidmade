@@ -1,4 +1,5 @@
 title: "No Such Thing as Atheism"  
+type: quote  
 date: 2011-08-18
 
 More [DFW][dfw], this time from a [commencement speech][ken] he gave at Kenyon College:
