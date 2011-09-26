@@ -1,5 +1,5 @@
 title: "Hanlon&rsquo;s Razor"  
-type: quote
+type: quote  
 date: 2011-08-15
 
 Via [Wikipedia][han]:
