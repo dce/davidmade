@@ -42,14 +42,31 @@ h1, h2, h3, p {
 }
 
 h1 {
-  font: 6em "LeagueGothicRegular", sans-serif;
+  font: 7em "LeagueGothicRegular", sans-serif;
   margin-top: 15px;
   letter-spacing: 0.2em;
   padding-left: 0.2em;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: 2px 2px #eee, 5px 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px #eee;
+  z-index: 100;
+  position: relative;
 }
+
+h1:after {
+  content: "Davidmade";
+  background-image: url(/images/diag.png);
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  margin-left: 7px;
+  margin-top: -110px;
+  display: block;
+  z-index: -1;
+  text-shadow: none;
+  opacity: 0.2;
+  position: relative;
+}
+
 
 h1 a {
   color: white;
