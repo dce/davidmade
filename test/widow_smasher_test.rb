@@ -22,4 +22,9 @@ context "The WidowSmasher" do
     setup { topic.smash("<ul><li>one word</li><li>two words</li></ul>").gsub(/\n/, '') }
     asserts("removes widows") { topic }.equals("<ul><li>one&#160;word</li><li>two&#160;words</li></ul>")
   end
+
+  context "with a space inside an HTML tag" do
+    setup { topic.smash('<p><a href="http://google.com/">Google</a></p>') }
+    asserts("does nothing") { topic }.equals('<p><a href="http://google.com/">Google</a></p>')
+  end
 end
