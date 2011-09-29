@@ -27,4 +27,14 @@ context "The WidowSmasher" do
     setup { topic.smash('<p><a href="http://google.com/">Google</a></p>') }
     asserts("does nothing") { topic }.equals('<p><a href="http://google.com/">Google</a></p>')
   end
+
+  context "with text and a short link" do
+    setup { topic.smash('<p>This is a <a href="#">link</a></p>') }
+    asserts("removes widow before link") { topic }.equals('<p>This is a&#160;<a href="#">link</a></p>')
+  end
+
+  context "with text, a long link, and ending text" do
+    setup { topic.smash('<p>This is a <a href="#">long link</a>.</p>') }
+    asserts("puts nbsp inside link") { topic }.equals('<p>This is a <a href="#">long&#160;link</a>.</p>')
+  end
 end

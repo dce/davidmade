@@ -11,19 +11,34 @@ class WidowSmasher
 
   def parse_nodes(nodes)
     nodes.each do |node|
-      if node_is_text?(node)
-        node.replace(remove_widow(node.to_html))
+      if content_node?(node)
+        remove_widow(node.children)
       else
         parse_nodes(node.children)
       end
     end
   end
 
-  def node_is_text?(node)
-    node.children.any? { |child| child.is_a?(Nokogiri::XML::Text) && !child.blank? }
+  def text_node?(node)
+    node.is_a?(Nokogiri::XML::Text) && !node.blank?
   end
 
-  def remove_widow(html)
-    html.reverse.sub(" ", "&#160;".reverse).reverse
+  def content_node?(node)
+    node.children.any? { |child| text_node?(child) }
+  end
+
+  def remove_widow(nodes)
+    smash = lambda { |html| html.reverse.sub(" ", "&#160;".reverse).reverse }
+
+    nodes.reverse.each do |node|
+      if text_node?(node) && node.to_s.include?(" ")
+        node.replace smash[node.to_html]
+        return true
+      elsif !node.is_a?(Nokogiri::XML::Text)
+        return true if remove_widow(node.children)
+      end
+    end
+
+    false
   end
 end
