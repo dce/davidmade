@@ -10,7 +10,7 @@
 }
 
 body {
-  font: 14px/1.5 Georgia, serif;
+  font: 13px/1.8 Georgia, serif;
   background-color: #eee;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -27,7 +27,8 @@ a:hover {
 }
 
 strong {
-  background-color: #ff9;
+  padding: 1px 0;
+  background-color: #ffa;
   font-weight: normal;
 }
 
@@ -42,7 +43,7 @@ h1, h2, h3, p {
 }
 
 h1 {
-  font: 7em "LeagueGothicRegular", sans-serif;
+  font: 98px "LeagueGothicRegular", sans-serif;
   margin-top: 15px;
   letter-spacing: 0.2em;
   padding-left: 0.2em;
@@ -120,8 +121,9 @@ div.post pre {
 }
 
 div.post blockquote {
-  color: rgba(0, 0, 0, 0.5);
-  margin-left: 20px;
+  padding-left: 10px;
+  margin-left: 0;
+  border-left: 5px solid rgba(0, 0, 0, 0.03);
 }
 
 div.audio h2, div.photo h2 {
@@ -134,7 +136,7 @@ div.photo img {
 }
 
 .meta {
-  font-size: 0.8em;
+  font-size: 0.85em;
   font-style: italic;
   line-height: normal;
   color: rgba(0, 0, 0, 0.8);
