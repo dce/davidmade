@@ -1,6 +1,12 @@
 require 'nokogiri'
 
 class WidowSmasher
+  attr_accessor :content_tags
+
+  def initialize
+    self.content_tags = %w(h1 h2 h3 h4 h5 h6 p li blockquote dt dd)
+  end
+
   def smash(html)
     doc = Nokogiri::HTML::DocumentFragment.parse(html, "ASCII")
     parse_nodes(doc.children)
@@ -23,8 +29,12 @@ class WidowSmasher
     node.is_a?(Nokogiri::XML::Text) && !node.blank?
   end
 
+  def content_tag?(node)
+    content_tags.include?(node.name)
+  end
+
   def content_node?(node)
-    node.children.any? { |child| text_node?(child) }
+    content_tag?(node) && !node.children.all? { |child| child.blank? || content_tag?(child) }
   end
 
   def remove_widow(nodes)

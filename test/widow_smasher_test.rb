@@ -37,4 +37,47 @@ context "The WidowSmasher" do
     setup { topic.smash('<p>This is a <a href="#">long link</a>.</p>') }
     asserts("puts nbsp inside link") { topic }.equals('<p>This is a <a href="#">long&#160;link</a>.</p>')
   end
+
+  context "with paragraph consisting of two links" do
+    setup { topic.smash('<p><a href="#">link one</a><a href="#">link two</a></p>') }
+    asserts("only escapes second link") { topic }.equals('<p><a href="#">link one</a><a href="#">link&#160;two</a></p>')
+  end
+
+  context "with a div with two paragraphs and free text" do
+    setup do
+      html = '<div>some text<p>paragraph 1</p><p>paragraph 2</p></div>'
+      topic.smash(html).gsub(/(  |\n)/, "")
+    end
+
+    asserts("escapes both paragraphs") { topic }.equals('<div>some text<p>paragraph&#160;1</p><p>paragraph&#160;2</p></div>')
+  end
+
+  context "with a UL containing paragraphs" do
+    setup do
+      html = <<-HTML
+        <div>
+          <ul>
+            <li>some text</li>
+            <li>
+              <p>par. 1</p>
+              <p>par. 2</p>
+            </li>
+          </ul>
+        </div>
+      HTML
+
+      topic.smash(html).gsub(/(  |\n)/, "")
+    end
+
+    asserts("escapes all LIs and Ps") { topic }.equals("<div><ul><li>some&#160;text</li><li><p>par.&#160;1</p><p>par.&#160;2</p></li></ul></div>")
+  end
+
+  context "with span as a content container" do
+    setup do
+      topic.content_tags << "span"
+      topic.smash("<p><span>span 1</span><span>span 2</span></p>")
+    end
+
+    asserts("escapes all spans") { topic }.equals("<p><span>span&#160;1</span><span>span&#160;2</span></p>")
+  end
 end
