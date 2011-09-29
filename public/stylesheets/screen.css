@@ -54,7 +54,14 @@ h1 {
   position: relative;
 }
 
-h1:after {
+h1 a {
+  display: block;
+  position: relative;
+  color: white;
+  border: none;
+}
+
+h1 a:after {
   content: "Davidmade";
   background-image: url(/images/diag.png);
   -webkit-background-clip: text;
@@ -68,14 +75,8 @@ h1:after {
   position: relative;
 }
 
-
-h1 a {
-  color: white;
-  border: none;
-}
-
-h1 a:hover {
-  text-shadow: 2px 2px #eee, 5px 5px rgba(0, 0, 0, 0.4);
+h1:hover a:after {
+  opacity: 0.8;
 }
 
 h2 a {
