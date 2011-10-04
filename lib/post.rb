@@ -1,4 +1,4 @@
-require 'lib/widow_smasher'
+require 'orph'
 
 class Post < Mustache
   include Comparable
@@ -29,7 +29,7 @@ class Post < Mustache
   date_format :timestamp,       "%Y-%m-%dT%H:%M:%SZ"
 
   def initialize(file_path)
-    @smasher = WidowSmasher.new
+    @orph = Orph.new
     @file_path = file_path
     @meta, @body = File.open(@file_path).read.split(/\n\n/, 2)
     @meta = YAML.load(@meta)
@@ -49,7 +49,7 @@ class Post < Mustache
   end
 
   def body
-    @smasher.smash(RDiscount.new(@body, :smart).to_html) if @body
+    @orph.fix(RDiscount.new(@body, :smart).to_html) if @body
   end
 
   def url
