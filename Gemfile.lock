@@ -1,0 +1,16 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    mustache (0.99.4)
+    nokogiri (1.5.0)
+    orph (0.1.1)
+      nokogiri
+    rdiscount (1.6.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mustache
+  orph
+  rdiscount
