@@ -1,6 +1,7 @@
 require 'mustache'
 require 'yaml'
 require 'rdiscount'
+require 'sass'
 
 Dir.glob('lib/*.rb').each {|f| require f }
 
@@ -45,11 +46,17 @@ task :build do |t|
   FileUtils.cp_r    "assets", "public"
   FileUtils.mkdir_p "public/posts"
 
+  Dir.glob("public/stylesheets/*.sass").each do |sass_file|
+    Sass.compile_file(sass_file, sass_file.gsub("sass", "css"))
+    FileUtils.rm(sass_file)
+  end
+
   posts = Post.all
 
   posts.each {|p| p.write }
 
   generate_indexes(posts)
+
   Post.types.each do |type|
     generate_indexes(posts, type)
   end

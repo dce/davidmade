@@ -1,0 +1,125 @@
+@font-face
+  font-family: 'LeagueGothicRegular'
+  src: url('/fonts/League_Gothic-webfont.eot')
+  src: url('/fonts/League_Gothic-webfont.eot?iefix') format("eot"), url('/fonts/League_Gothic-webfont.woff') format("woff"), url('/fonts/League_Gothic-webfont.ttf') format("truetype"), url('/fonts/League_Gothic-webfont.svg#webfontFHzvtkso') format("svg")
+  font-weight: normal
+  font-style: normal
+
+body
+  font: 13px / 1.8 Georgia, serif
+  background: #eeeeee url(/images/soft_wallpaper.png)
+  color: rgba(0, 0, 0, 0.8)
+
+a
+  color: rgba(0, 0, 0, 0.8)
+  text-decoration: none
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  padding-bottom: 1px
+
+  &:hover
+    border-color: rgba(0, 0, 0, 0.3)
+
+strong
+  padding: 1px 0
+  background-color: #ffa
+  font-weight: normal
+
+h1, h2, h3, p
+  font-weight: normal
+  margin: 0 0 10px
+
+h1
+  font: 98px "LeagueGothicRegular", sans-serif
+  margin-top: 15px
+  letter-spacing: 0.2em
+  padding-left: 0.2em
+  text-transform: uppercase
+  text-align: center
+  text-shadow: 2px 2px #eee
+  z-index: 100
+  position: relative
+  a
+    display: block
+    position: relative
+    color: white
+    border: none
+    &:after
+      content: "Davidmade"
+      background-image: url(/images/diag.png)
+      -webkit-background-clip: text
+      color: rgba(0, 0, 0, 0)
+      margin-left: 7px
+      margin-top: -110px
+      display: block
+      z-index: -1
+      text-shadow: none
+      opacity: 0.2
+      position: relative
+  &:hover a:after
+    opacity: 0.8
+
+h2 a
+  color: black
+  border: none
+  &:hover
+    background-color: #ff9
+
+div.container
+  width: 500px
+  margin: 20px auto
+
+ul.post-types
+  list-style-type: none
+  text-align: center
+  padding: 0
+  margin: -5px 0 15px
+  li
+    display: inline
+    a
+      background-color: rgba(0, 0, 0, 0.1)
+      padding: 3px 6px
+      margin-right: 5px
+      border-radius: 5px
+    &.active a
+      border-color: rgba(0, 0, 0, 0.4)
+
+div
+  &.post
+    position: relative
+    margin: 60px 0 20px
+    pre
+      padding-left: 20px
+      font-size: 0.9em
+      color: rgba(0, 0, 0, 0.5)
+    blockquote
+      padding-left: 10px
+      margin: 0
+      border-left: 5px solid rgba(0, 0, 0, 0.03)
+  &.audio h2
+    display: none
+  &.photo
+    h2
+      display: none
+    img
+      background-color: white
+      padding: 10px
+
+.meta
+  font-size: 0.85em
+  font-style: italic
+  line-height: normal
+  color: rgba(0, 0, 0, 0.8)
+  a
+    color: rgba(0, 0, 0, 0.6)
+
+p.meta span.divider
+  padding: 0 2px
+  color: rgba(0, 0, 0, 0.3)
+
+div
+  &.next-page, &.footer
+    padding: 15px 0 12px
+  &.next-page
+    text-align: right
+  &.footer
+    border-top: 1px dotted rgba(0, 0, 0, 0.1)
