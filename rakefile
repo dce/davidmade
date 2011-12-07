@@ -39,10 +39,11 @@ end
 
 desc "Generate static site files"
 task :build do |t|
-  print "Rebuilding... "
+  puts "Rebuilding..."
 
-  FileUtils.rm_rf("public/posts")
-  FileUtils.mkdir("public/posts")
+  FileUtils.rm_rf   "public"
+  FileUtils.cp_r    "assets", "public"
+  FileUtils.mkdir_p "public/posts"
 
   posts = Post.all
 
@@ -53,7 +54,7 @@ task :build do |t|
     generate_indexes(posts, type)
   end
 
-  puts "done."
+  puts "Done."
 end
 
 desc "Create a new post"
