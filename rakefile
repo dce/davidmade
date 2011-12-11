@@ -46,9 +46,8 @@ desc "Generate static site files"
 task :build do |t|
   puts "Rebuilding..."
 
-  log "Deleting & recreating public folder"
-  FileUtils.rm_rf   "public"
-  FileUtils.mkdir_p "public/posts"
+  log "Deleting public folder"
+  FileUtils.rm_rf "public"
 
   log "Copying assets"
   FileUtils.cp_r "assets", "public"
@@ -60,6 +59,7 @@ task :build do |t|
   end
 
   posts = Post.all
+  FileUtils.mkdir_p "public/posts"
 
   log "Writing individual post files"
   posts.each { |p| p.write }
