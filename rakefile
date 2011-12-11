@@ -38,14 +38,22 @@ def generate_indexes(posts, type = nil)
   end
 end
 
+def log(msg)
+  puts "=> #{msg}"
+end
+
 desc "Generate static site files"
 task :build do |t|
   puts "Rebuilding..."
 
+  log "Deleting & recreating public folder"
   FileUtils.rm_rf   "public"
-  FileUtils.cp_r    "assets", "public"
   FileUtils.mkdir_p "public/posts"
 
+  log "Copying assets"
+  FileUtils.cp_r "assets", "public"
+
+  log "Processing SASS files"
   Dir.glob("public/stylesheets/*.sass").each do |sass_file|
     Sass.compile_file(sass_file, sass_file.gsub("sass", "css"))
     FileUtils.rm(sass_file)
@@ -53,10 +61,13 @@ task :build do |t|
 
   posts = Post.all
 
-  posts.each {|p| p.write }
+  log "Writing individual post files"
+  posts.each { |p| p.write }
 
+  log "Generating main index pages"
   generate_indexes(posts)
 
+  log "Generating type-specific index pages"
   Post.types.each do |type|
     generate_indexes(posts, type)
   end
