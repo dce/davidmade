@@ -77,10 +77,10 @@ end
 
 desc "Create a new post"
 task :new_post, [:file_name] do |t, args|
-  title = args.file_name.split("-").map { |w| w.capitalize } * " "
+  title = args.file_name.split("-").map {|w| w.capitalize } * " "
 
   File.open("posts/#{args.file_name}.md", "w") do |file|
-    file.write "title: #{title}  \n"
+    file.write "title: \"#{title}\"  \n"
     file.write "date: #{Date.today}\n\n\n"
   end
 
