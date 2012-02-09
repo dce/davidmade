@@ -4,7 +4,7 @@ date: 2011-06-17
 
 Another [golden nugget][gbk] from [Cryptonomicon][cry]:
 
-  > MEN WHO BELIEVE THAT THEY ARE ACCOMPLISHING *SOMETHING*  
+  > MEN WHO BELIEVE THAT THEY ARE ACCOMPLISHING *SOMETHING*
   > by speaking speak in a different way from men who believe that
   > speaking is a *waste of time*. Bobby Shaftoe has learned most of
   > his practical knowledge -- how to fix a car. butcher a deer, throw a spiral,
