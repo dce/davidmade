@@ -15,7 +15,7 @@ date: 2012-02-11
 
 I've been using the Chemex for a year or so now, but with a generic kettle and a cheap
 blade grinder. The addition of the Hario and Bodum have made a noticeable difference
-in the quality and consistency of the coffee I brew.
+in the quality and consistency of the coffee.
 
 Beans from [Counter Culture][counter]. Mug from [GitHub][github]. Inspired by
 ["The Coffee Setup, 2010" by Marco Arment][marco].
