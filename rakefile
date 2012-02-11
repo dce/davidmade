@@ -52,11 +52,7 @@ task :build do |t|
   log "Copying assets"
   FileUtils.cp_r "assets", "public"
 
-  log "Processing SASS files"
-  Dir.glob("public/stylesheets/*.sass").each do |sass_file|
-    Sass.compile_file(sass_file, sass_file.gsub("sass", "css"))
-    FileUtils.rm(sass_file)
-  end
+  Rake::Task[:sass].invoke
 
   posts = Post.all
   FileUtils.mkdir_p "public/posts"
@@ -73,6 +69,15 @@ task :build do |t|
   end
 
   puts "Done."
+end
+
+desc "Process SASS files"
+task :sass do
+  log "Processing SASS files"
+  Dir.glob("assets/stylesheets/*.sass").each do |sass_file|
+    Sass.compile_file(sass_file, sass_file.gsub("sass", "css").gsub("assets", "public"))
+    FileUtils.rm sass_file.gsub("assets", "public"), :force => true
+  end
 end
 
 desc "Create a new post"
