@@ -13,6 +13,10 @@ date: 2012-02-11
   [grinder]: http://www.amazon.com/Bodum-Bistro-Electric-Coffee-Grinder/dp/B0043095WW/
   [kettle]:  http://www.amazon.com/Hario-VKB-120HSV-Coffee-Kettle-Buono/dp/B000IGOXLS/
 
+I've been using the Chemex for a year or so now, but with a generic kettle and a cheap
+blade grinder. The addition of the Hario and Bodum have made a noticeable difference
+in the quality and consistency of the coffee I brew.
+
 Beans from [Counter Culture][counter]. Mug from [GitHub][github]. Inspired by
 ["The Coffee Setup, 2010" by Marco Arment][marco].
 
