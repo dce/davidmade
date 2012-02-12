@@ -5,6 +5,7 @@ GEM
     nokogiri (1.5.0)
     orph (0.1.1)
       nokogiri
+    rb-fsevent (0.9.0)
     rdiscount (1.6.8)
     sass (3.1.11)
 
@@ -14,5 +15,6 @@ PLATFORMS
 DEPENDENCIES
   mustache
   orph
+  rb-fsevent
   rdiscount
   sass
