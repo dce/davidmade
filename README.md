@@ -7,10 +7,11 @@ This is a simple app to generate a [Tumblr][tum]-style blog backed by a Git repo
 
 ## Requirements
 
-This whole thing's done with Ruby and Rake. You'll need the [Mustache][mus] and [RDiscount][rds] gems.
+This whole thing's done with Ruby and Rake. You'll need the [Mustache][mus], [RDiscount][rds], and [Sass][sas] gems.
 
   [mus]: https://github.com/defunkt/mustache
   [rds]: https://github.com/rtomayko/rdiscount
+  [sas]: http://sass-lang.com/
 
 ## Running Locally
 
