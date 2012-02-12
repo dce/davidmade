@@ -1,7 +1,9 @@
 title: "Coffee Setup, February 2012"  
+type: photo  
+file: coffee.jpg  
 date: 2012-02-11
 
-<img src="/images/coffee.jpg" width="480" height="320" />
+My coffee setup, February 2012:
 
   * [Chemex Six Cup Glass Coffee Maker with Glass Handle][chemex]
   * [Bodum Bistro Electric Burr Coffee Grinder][grinder]
