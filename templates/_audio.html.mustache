@@ -3,15 +3,17 @@
 
   <p>
     <audio src="/mp3/{{file}}" controls="controls"></audio>
-    <br />
-    <span class="meta">
-      <a href="/mp3/{{file}}">Download &ldquo;{{{title}}}&rdquo;</a>
-    </span>
   </p>
+
+  <h3>
+    <a href="/{{url}}">{{formatted_date}}</a>
+  </h3>
+
+  <p>
+    <em>{{{title}}}</em>
+    <a href="/mp3/{{file}}">(mp3)</a>
+  </p>
+
 
   {{{body}}}
-
-  <p class="meta">
-    <a href="/{{url}}">{{formatted_date}}</a>
-  </p>
 </div>

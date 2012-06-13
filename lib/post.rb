@@ -25,7 +25,7 @@ class Post < Mustache
   meta :type, :default => "text"
 
   date_format :date,            "%Y-%m-%d"
-  date_format :formatted_date,  "%a, %b %e, %Y"
+  date_format :formatted_date,  "%b %e, %Y"
   date_format :timestamp,       "%Y-%m-%dT%H:%M:%SZ"
 
   def initialize(file_path)
