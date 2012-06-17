@@ -91,7 +91,14 @@ div
 
     ul
       padding-left: 0
-      list-style-type: square
+      list-style-type: none
+
+    ul
+      li:before
+        content: "■"
+        position: absolute
+        left: -14px
+        color: rgba(0, 0, 0, 0.1)
 
   &.audio
     margin-top: 60px
