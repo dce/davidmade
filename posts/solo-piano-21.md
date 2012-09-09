@@ -3,4 +3,4 @@ type: audio
 file: solo-piano-21.mp3
 date: 2012-09-09
 
-Blues progression in C minor, 6/8 time, with some sixths and sevenths for flavoring.
+Blues progression in C minor, 3/4 time, with some sixths and sevenths for flavoring.
