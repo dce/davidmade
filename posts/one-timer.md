@@ -10,10 +10,8 @@ I've been taking a course on [Cryptography][1] and simultaneously working throug
 
     > ./encrypt -k f00bd00b -p "Derp"
     b46ea27b
-
     > ./decrypt -k f00bd00b -c b46ea27b
     Derp
-
     > ./crack -p "Derp" -c b46ea27b
     f00bd00b
 
