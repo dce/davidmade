@@ -3,7 +3,7 @@ require 'yaml'
 require 'rdiscount'
 require 'sass'
 
-Dir.glob('lib/*.rb').each {|f| require f }
+Dir.glob('./lib/*.rb').each { |f| require f }
 
 PER_PAGE = 10
 
