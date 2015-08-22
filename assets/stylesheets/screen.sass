@@ -5,14 +5,15 @@ body
 
 a
   color: rgba(0, 0, 0, 0.8)
+  text-decoration: none
 
   &:hover
     color: #c00
-    text-decoration: underline
+    transition: color 250ms linear
 
 p, li
   a
-    text-decoration: underline
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
 
 h1
   text-align: center
@@ -27,9 +28,6 @@ h1
   span.last
     letter-spacing: 0
 
-  a
-    text-decoration: none
-
 h2, h3, p
   font-size: 1em
   margin: 0 0 0.9em
@@ -42,10 +40,6 @@ h3
 
   a
     color: rgba(0, 0, 0, 0.2)
-    text-decoration: none
-
-    &:hover
-      color: #c00
 
 @media screen and (max-width: 500px)
   body

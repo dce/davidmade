@@ -3,19 +3,21 @@
 {{/posts}}
 
 <div class="pagination">
-  {{#prev_page}}
-    <a href="{{#post_type}}/{{post_type}}{{/post_type}}/{{prev_page}}.html">Previous</a>
-  {{/prev_page}}
-  {{^prev_page}}
-    Previous
-  {{/prev_page}}
+  <p>
+    {{#prev_page}}
+      <a href="{{#post_type}}/{{post_type}}{{/post_type}}/{{prev_page}}.html">Previous</a>
+    {{/prev_page}}
+    {{^prev_page}}
+      Previous
+    {{/prev_page}}
 
-  <span class="current-page">{{curr_page}} of {{last_page}}</span>
+    <span class="current-page">{{curr_page}} of {{last_page}}</span>
 
-  {{#next_page}}
-    <a href="{{#post_type}}/{{post_type}}{{/post_type}}/{{next_page}}.html">Next</a>
-  {{/next_page}}
-  {{^next_page}}
-    Next
-  {{/next_page}}
+    {{#next_page}}
+      <a href="{{#post_type}}/{{post_type}}{{/post_type}}/{{next_page}}.html">Next</a>
+    {{/next_page}}
+    {{^next_page}}
+      Next
+    {{/next_page}}
+  </p>
 </div>
