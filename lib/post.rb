@@ -1,4 +1,5 @@
 require 'orph'
+require 'pygments'
 
 class Post < Mustache
   include Comparable
@@ -49,7 +50,13 @@ class Post < Mustache
   end
 
   def body
-    @orph.fix(RDiscount.new(@body, :smart).to_html) if @body
+    if @body
+      markup = @body.gsub(/```(\w+)(.+?)```/m) do |code|
+        Pygments.highlight($2, lexer: $1)
+      end
+
+      @orph.fix(RDiscount.new(markup, :smart).to_html)
+    end
   end
 
   def url
