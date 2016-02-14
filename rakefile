@@ -14,7 +14,7 @@ def generate_indexes(posts, type = nil)
     posts = posts.select {|p| p.type == type }
     directory << "/#{type}"
     FileUtils.mkdir(directory) rescue nil
-  end 
+  end
 
   last_page = (posts.size - 1) / PER_PAGE
 
