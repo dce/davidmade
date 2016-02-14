@@ -23,7 +23,7 @@ def generate_indexes(posts, type = nil)
       index = Index.new(posts[page * PER_PAGE, PER_PAGE])
       index[:post_type] = type
       index[:curr_page] = page + 1
-      index[:last_page] = last_page
+      index[:last_page] = last_page + 1
       index[:prev_page] = page == 0 ? nil : page == 1 ? "index" : page
       index[:next_page] = page + 2 unless page == last_page
       index.render
