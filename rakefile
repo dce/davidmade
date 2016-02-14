@@ -92,7 +92,7 @@ task :new_post, [:file_name] do |t, args|
     file.write "date: #{Date.today}\n\n\n"
   end
 
-  exec "git checkout -b #{args.file_name} && mvim posts/#{args.file_name}.md +4"
+  exec "git checkout -b #{args.file_name} && vim posts/#{args.file_name}.md +4"
 end
 
 desc "Start a local server at http://localhost:8000"
