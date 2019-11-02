@@ -1,8 +1,10 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    mini_portile2 (2.4.0)
     mustache (0.99.4)
-    nokogiri (1.5.0)
+    nokogiri (1.10.5)
+      mini_portile2 (~> 2.4.0)
     orph (0.1.1)
       nokogiri
     rake (10.3.2)
