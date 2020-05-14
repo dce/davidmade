@@ -48,7 +48,7 @@ register among everything else going on in this book. Emphasis mine.
   > Michael Chang: namely Michael Chang's enjoyable feeling of
   > being-envied-by-LaMont-Chu. No such animal.' 'Animal?' 'You burn with hunger
   > for food that does not exist.' 'This is good news?' 'It is the truth. To be
-  > envied, admired, is not it feeling. Nor is fame it feeling. There are
+  > envied, admired, is not it feeling. Nor is fame a feeling. There are
   > feelings associated with fame, but few of them are any more enjoyable than
   > the feelings associated with envy of fame.' 'The burning doesn't go away?'
   > '**What fire dies when you feed it?** It is not fame itself they wish to deny
