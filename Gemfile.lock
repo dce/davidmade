@@ -1,14 +1,18 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    mini_portile2 (2.8.0)
     mustache (0.99.4)
-    nokogiri (1.5.0)
+    nokogiri (1.13.3)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     orph (0.1.1)
       nokogiri
     posix-spawn (0.3.11)
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
+    racc (1.6.0)
     rake (10.3.2)
     rb-fsevent (0.9.0)
     rdiscount (1.6.8)
